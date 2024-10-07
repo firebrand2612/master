@@ -1,16 +1,16 @@
 body {
-    font-family:Arial, sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 90vh;
     margin: 0;
     background-color: #040608;
-    
 }
 
 .card {
-    width: 800px;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 800px; /* Set a maximum width */
     border: 2px solid #f4077e;
     border-radius: 15px;
     overflow: hidden;
@@ -28,10 +28,11 @@ video {
 }
 
 .photo {
-    position: absolute; /* Position the photo over the video */
-    bottom: 0.5%;          /* Adjust as needed */
-    left: 0.5%;         /* Adjust as needed */
-    width: 200px;      /* Adjust the size as needed */
+    position: absolute;
+    bottom: 0.5%;
+    left: 0.5%;
+    width: 20%; /* Use a percentage for responsiveness */
+    max-width: 200px; /* Set a max width */
     border-radius: 5px;
 }
 
@@ -39,15 +40,17 @@ video {
     position: absolute;
     bottom: 0.5%;
     right: 0.5%;
-    width: 150px;
+    width: 15%; /* Use a percentage for responsiveness */
+    max-width: 150px; /* Set a max width */
     border-radius: 5px;
 }
 
 .peacock {
-    position: absolute; /* Position the photo over the video */
-    top: - 0.5%;          /* Adjust as needed */
-    right: 0.5%;         /* Adjust as needed */
-    width: 150px;      /* Adjust the size as needed */
+    position: absolute;
+    top: -0.5%;
+    right: 0.5%;
+    width: 15%; /* Use a percentage for responsiveness */
+    max-width: 150px; /* Set a max width */
     border-radius: 5px;
 }
 
@@ -56,18 +59,18 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 40px;
+    font-size: 5vw; /* Use viewport width for responsive font size */
     color: #f2edec;
     text-align: center;
     padding: 10px;
     border-radius: 10px;
     font-weight: bolder;
-    font-family: 'MyCustomFont',sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
 }
 
 @font-face {
-    font-family: 'MyCustomFont'; /* Name for the font */
-    src: url('static\\Qwitcher_Grypen\\QwitcherGrypen-Bold.ttf') format('truetype'); /* Path to your font file */
+    font-family: 'MyCustomFont';
+    src: url('static\\Qwitcher_Grypen\\QwitcherGrypen-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -76,7 +79,7 @@ video {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #0707db; /* Green */
+    background-color: #0707db;
     color: white;
     border: none;
     border-radius: 5px;
@@ -86,9 +89,31 @@ video {
 }
 
 #open-message:hover {
-    background-color: #04c0f4; /* Darker green */
+    background-color: #04c0f4;
 }
 
 #open-message:focus {
-    outline: none; /* Remove outline on focus */
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .messages {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    .photo, .flute, .peacock {
+        width: 25%; /* Make images larger relative to smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .messages {
+        font-size: 8vw; /* Further adjust font size for very small screens */
+    }
+
+    #open-message {
+        font-size: 16px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
 }
