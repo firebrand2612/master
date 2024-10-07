@@ -55,7 +55,7 @@ function showNextMessage() {
 function redirectToAnotherPage() {
     music.pause(); // Pause the music
     music.currentTime = 0; // Reset music to start
-    window.location.href = "https://www.google.com"; // Replace with your desired URL
+    window.location.href = "https://firebrand2612.github.io/master/"; // Replace with your desired URL
 }
 
 // Display the "Open Message" button when the page loads
