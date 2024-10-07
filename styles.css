@@ -1,0 +1,94 @@
+body {
+    font-family:Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+    background-color: #040608;
+    
+}
+
+.card {
+    width: 800px;
+    border: 2px solid #f4077e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+    position: relative;
+    flex: 1;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.photo {
+    position: absolute; /* Position the photo over the video */
+    bottom: 0.5%;          /* Adjust as needed */
+    left: 0.5%;         /* Adjust as needed */
+    width: 200px;      /* Adjust the size as needed */
+    border-radius: 5px;
+}
+
+.flute {
+    position: absolute;
+    bottom: 0.5%;
+    right: 0.5%;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.peacock {
+    position: absolute; /* Position the photo over the video */
+    top: - 0.5%;          /* Adjust as needed */
+    right: 0.5%;         /* Adjust as needed */
+    width: 150px;      /* Adjust the size as needed */
+    border-radius: 5px;
+}
+
+.messages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #f2edec;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-family: 'MyCustomFont',sans-serif;
+}
+
+@font-face {
+    font-family: 'MyCustomFont'; /* Name for the font */
+    src: url('static\\Qwitcher_Grypen\\QwitcherGrypen-Bold.ttf') format('truetype'); /* Path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+#open-message {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0707db; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    opacity: 0.75;
+}
+
+#open-message:hover {
+    background-color: #04c0f4; /* Darker green */
+}
+
+#open-message:focus {
+    outline: none; /* Remove outline on focus */
+}
